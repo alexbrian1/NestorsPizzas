@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Burger Day</title>
+    <link rel="shortcut icon" href="img/logo_nestorpizzas_Mesa de trabajo 1.png">
+    <title>Nestor´s Pizzas</title>
 </head>
 <body>
   
@@ -19,20 +20,28 @@
 <!-- Header NUEVO -->
 
         <header>
-            <a href="#" class="logo"><i class="bx bx-home"></i>Burger Day</a>
 
             <ul class="navlist">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#shop">Our shop</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#home" class="active">Inico</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+                <li><a href="#shop">Menu</a></li>
             </ul>
 
-            <div class="nav-icons">
+
+            <!-- <a href="#" class="logo"><i class="bx bx-home"></i>Burger Day</a> -->
+            <a href="#" class="logo"><img src="img/logo_nestorpizzas_Mesa de trabajo 1.png" alt="Logo"></a>
+
+            <ul class="navlist">
+                <li><a href="#about">About us</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+
+            <!-- <div class="nav-icons">
                 <a href="#"><i class="bx bx-search"></i></a>
                 <a href="#"><i class="bx bx-cart"></i></a>
                 <div class="bx bx-menu" id="menu-icon"></div>
-            </div>
+            </div> -->
         </header>
 
 
@@ -42,34 +51,55 @@
 <!-- HOME -->
 <!-- HOME -->
 
-        <section class="home" id="home">
-            <div class="home-text">
+        <section class="home banner" id="home">
+            <div class="contenedor">
+                
+                <!-- <section id="pedidos" class="container">
+                    <div class="container-box">
+                        <img src="img/icon-delivery.png" alt="">
+                        <h3>Delivery</h3>
+                        <a class="btn" href="#">Pedir</a>
+                    </div>
+                    <div class="container-box">
+                        <img src="img/icon-cubiertos.png" alt="">
+                        <h3>Menu</h3>
+                        <a href="">Consultar</a>
+                    </div>
+                    <div class="container-box">
+                        <i class="fa-brands fa-instagram"></i>
+                        <h3>Club</h3>
+                        <a href="">Ser Fan</a>
+                    </div>
+                </section> -->
+            </div>
+            
+            <!-- <div class="home-text">
                 <h1>Meet, <span>Eat &</span> <br>Enjoy the true <br> taste</h1>
                 <a href="#" class="btn">Explore Menu <i class="bx bxs-right-arrow"></i></a>
                 <a href="#" class="btn2">Order now</a>
             </div>
             <div class="home-img">
                 <img src="img/imagen1.png" alt="Hamburguesa Clasica">
-            </div>
+            </div> -->
         </section>
 
         <!-- CONTAINER -->
 
-        <section class="container">
+        <section id="pedidos" class="container">
             <div class="container-box">
-                <img src="img/imagen1.png" alt="">
-                <h3>11:00 am - 8:00pm</h3>
-                <a href="">Working hours</a>
+                <img src="img/icon-delivery.png" alt="">
+                <h3>Delivery</h3>
+                <a href="#">Pedir</a>
             </div>
             <div class="container-box">
-                <img src="img/imagen1.png" alt="">
-                <h3>Honey Springs 888</h3>
-                <a href="">Get Direccion</a>
+                <img src="img/icon-cubiertos.png" alt="">
+                <h3>Menu</h3>
+                <a href="">Consultar</a>
             </div>
             <div class="container-box">
-                <img src="img/imagen1.png" alt="">
-                <h3>11-21855855</h3>
-                <a href="">Call Us On</a>
+                <i class="fa-brands fa-instagram"></i>
+                <h3>Club</h3>
+                <a href="">Ser Fan</a>
             </div>
         </section>
 
@@ -77,7 +107,7 @@
 
         <section class="about" id="about">
             <div class="about-img">
-                <img src="img/imagen1.png" alt="">
+                <img src="img/fugazzetaRellena.jpeg" alt="">
             </div>
 
             <div class="about-text">
@@ -88,6 +118,28 @@
                 <a href="#" class="btn">Explore Story<i class="bx bxs-right-arrow"></i></a>
             </div>
         </section>
+
+        <!-- Galeria de aberturas para combinar con el js -->
+        <section id="galeria" class="section section-galeria">
+            <div class="contenedor">
+                <h4>Galeria</h4>
+                <h5>Nuestros Clientes que nos elijen cada día</h5>
+                <div class=" galeria">
+                    <a href="#imagen1"><img class="gallery-image" src="img/banner5.png" alt=""></a>
+                    <a href="#imagen2"><img class="gallery-image" src="img/banner5.png" alt=""></a>
+                    <a href="#imagen3"><img class="gallery-image" src="img/banner5.png" alt=""></a>
+                    <a href="#imagen4"><img class="gallery-image" src="img/banner5.png" alt=""></a>
+                    <a href="#imagen5"><img class="gallery-image" src="img/banner5.png" alt=""></a>
+                    <a href="#imagen6"><img class="gallery-image" src="img/banner5.png" alt=""></a>
+                </div>
+            </div>
+            <div id="lightbox" class="lightbox">
+                <span class="close">&times;</span>
+                <img class="lightbox-content" id="lightbox-image">
+              </div>
+        </section>
+        <!-- Galeria de aberturas para combinar con el js -->
+
 
         <!-- our shop -->
 
@@ -243,28 +295,27 @@
         <section class="contact" id="contact">
             <div class="contact-content">
                 <div class="contact-text">
-                    <h2>Contact Us</h2>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium eaque doloribus eligendi labore animi quaerat dolore, aperiam, laboriosam modi placeat ut ratione quibusdam cupiditate delectus mollitia voluptas molestiae non!</p>
+                    <h4>Contacto</h4>
+                    <h2>Sobre Nosotros</h2>
+                    <p>En Nestor´s Pizzas nos especializamos en pizzas y hamburguesas, nos enfocamos en ofrecer la mejor calidad de nuestros productos y brindar nuestro mejor servicio desde la presentación hasta la entrega final al comensal.</p>
+                    <h2>El Mejor Sabor Logrado</h2>
+                    <p>Años perfeccionando nuestras recetas de pizzas y panes de hamburguesa para llevar lo mejor a la mesa de cada cliente que nos elije cada noche para su cena.</p>
+
                     <div class="social">
                         <a href="#" class="clr"><i class="bx bxl-instagram-alt"></i></a>
                         <a href="#"><i class="bx bxl-facebook"></i></a>
-                        <a href="#"><i class="bx bxl-twitter"></i></a>
-                        <a href="#"><i class="bx bxl-github"></i></a>
                         <a href="#"><i class="bx bxl-google"></i></a>
                     </div>
                 </div>
                 <div class="details">
                     <div class="main-d">
-                        <a href="#"><i class="bx bxs-location-plus"></i>Main stree 65, ny, ny</a>
+                        <a href="#"><i class="bx bxs-location-plus"></i>Solon 682, La Victoria, Moreno</a>
                     </div>
                     <div class="main-d">
-                        <a href="#"><i class="bx bx-mobile-alt"></i>1128875825</a>
+                        <a href="#"><i class="bx bx-mobile-alt"></i>1122648048</a>
                     </div>
                     <div class="main-d">
-                        <a href="#"><i class="bx bx-youtube"></i>Burger day</a>
-                    </div>
-                    <div class="main-d">
-                        <a href="#"><i class="bx bx-bell"></i>Subcribirse</a>
+                        <a href="#"><img src="img/logo_nestorpizzas_Mesa de trabajo 1.png" alt=""></a>
                     </div>
 
                 </div>
