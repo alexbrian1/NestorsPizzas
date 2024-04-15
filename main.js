@@ -46,7 +46,10 @@ sr.reveal(".about-text",{delay:400});
 sr.reveal(".middle-text",{});
 sr.reveal(".row-btn, .shop-content",{delay:300});
 
-sr.reveal(".review, .contact",{delay:300});
+sr.reveal("#galeria",{delay:300});
+
+
+sr.reveal(".reviews, .review-content",{delay:300});
 
 
 //Galeria
