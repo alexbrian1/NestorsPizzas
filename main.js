@@ -49,7 +49,10 @@ sr.reveal(".row-btn, .shop-content",{delay:300});
 sr.reveal("#galeria",{delay:300});
 
 
-sr.reveal(".reviews, .review-content",{delay:300});
+sr.reveal(".reviews, .review-content",{});
+sr.reveal(".row-btnReduce",{});
+
+sr.reveal("#contact",{delay:450});
 
 
 //Galeria
