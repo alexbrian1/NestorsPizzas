@@ -482,7 +482,7 @@ header.sticky{
 .in-text{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 
@@ -529,6 +529,7 @@ header.sticky{
     padding: 30px 0 50px;
 
 }
+
 .row-btn{
     text-align: center;
     margin-top: 4rem;
