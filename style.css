@@ -960,6 +960,9 @@ header.sticky{
         --big-font: 2.8rem;
         --h2-font: 1.5rem;
     }
+    .home-text{
+        padding-top: 241px;
+    }
 }
 
 @media(max-width: 440px){
@@ -975,6 +978,7 @@ header.sticky{
     }
 
 }
+
 
 
 
