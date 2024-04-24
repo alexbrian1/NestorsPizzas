@@ -8,14 +8,23 @@ window.addEventListener("scroll",()=>{
 ///// OPEN MENU
 
 
-// let menu = document.querySelector("#menu-icon");
-// let navlist = document.querySelector(".navlist");
+let menu = document.querySelector("#menu-icon");
+let navlist = document.querySelector(".navlist");
 
-// menu.onclick = () =>{
-//     menu.classList.toggle("bx-x");
-//     navlist.classList.toggle("open");
 
-// }
+
+menu.onclick = () =>{
+  menu.classList.toggle("bx-x");
+  navlist.classList.toggle("open");
+  navlist.innerHTML = `
+                  <li><a href="#home" class="active">Inico</a></li>
+                  <li><a href="#pedidos">Pedidos</a></li>
+                  <li><a href="#about">Novedad</a></li>
+                  <li><a href="#shop">Menú</a></li>
+                  <li><a href="#galeria">Galeria</a></li>
+                  <li><a href="#contact">Contacto</a></li>`;
+
+}
 
 /// solucion
 
