@@ -934,7 +934,7 @@ header.sticky{
 
     }
     .home-text{
-        padding-top: 125px;
+        padding-top: 113px;
     }
     .home-text h1{
         margin-top: 0;
@@ -981,6 +981,10 @@ header.sticky{
     }
     .ratings i{
             font-size: 15px;
+    }
+    .container-box{
+        padding: 40px;
+    
     }
 
 }
