@@ -953,6 +953,9 @@ header.sticky{
     .ratings i{
         font-size: 15px;
     }
+    .btnBW{
+        display: inline;
+    }
 }
 
 @media(max-width: 475px){
@@ -961,7 +964,11 @@ header.sticky{
         --h2-font: 1.5rem;
     }
     .home-text{
-        padding-top: 241px;
+        padding-top: 120px;
+    }
+    .scroll{
+        bottom: .8rem;
+        right: .8rem;
     }
 }
 
