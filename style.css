@@ -933,12 +933,6 @@ header.sticky{
         height: 118vh;
 
     }
-    .home-text{
-        padding-top: 113px;
-    }
-    .home-text h1{
-        margin-top: 0;
-    }
     .home-img{
         text-align: center;
     }
@@ -969,6 +963,27 @@ header.sticky{
         bottom: .8rem;
         right: .8rem;
     }
+    .container{
+        padding: 35px 0 0 0;
+        gap: 1rem;
+    }
+    .banner .contenedor{
+        display: block;
+    }
+    .home-text{
+        padding-top: 100px;
+    }
+    .home-text h1{
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .home-text h2{
+        margin-top: 0;
+    }
+    .container-box{
+        margin: 30px;
+    
+    }
 }
 
 @media(max-width: 440px){
@@ -980,7 +995,7 @@ header.sticky{
         margin-top: 10px;
     }
     .ratings i{
-            font-size: 15px;
+         font-size: 15px;
     }
     .container-box{
         padding: 40px;
