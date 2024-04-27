@@ -947,6 +947,10 @@ header.sticky{
 }
 
 @media(max-width: 520px){
+    :root{
+        --big-font: 2.6rem;
+        --h2-font: 1.5rem;
+    }
     .social i{
         margin: 0 10px;
 
@@ -959,11 +963,27 @@ header.sticky{
         gap: 1.5rem;
 
     }
+    .container{
+        padding: 35px 0 0 0;
+        gap: 1rem;
+    }
     .banner .contenedor{
         display: block;
     }
     .home-text{
-        padding-top: 50px;
+        margin-top: 100px;
+        padding-top: 0;
+    }
+    .home-text h1{
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .home-text h2{
+        margin-top: 0;
+    }
+    .container-box{
+        margin: 30px;
+    
     }
 
 }
@@ -977,27 +997,6 @@ header.sticky{
     .scroll{
         bottom: .8rem;
         right: .8rem;
-    }
-    .container{
-        padding: 35px 0 0 0;
-        gap: 1rem;
-    }
-    .banner .contenedor{
-        display: block;
-    }
-    .home-text{
-        padding-top: 100px;
-    }
-    .home-text h1{
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-    .home-text h2{
-        margin-top: 0;
-    }
-    .container-box{
-        margin: 30px;
-    
     }
 }
 
