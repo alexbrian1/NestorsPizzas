@@ -999,12 +999,6 @@ header.sticky{
         right: .8rem;
     }
 }
-
-@media(max-width: 450px){
-    .home-text h1{
-        color: red;
-    }
-}
 @media(max-width: 440px){
     .home{
         height: 110vh;
@@ -1021,6 +1015,12 @@ header.sticky{
     
     }
 
+}
+
+@media(max-width: 415px){
+    .home-text{
+        margin-top: 0;
+    }
 }
 
 
