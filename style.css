@@ -1023,10 +1023,7 @@ header.sticky{
         --h2-font: 1.5rem;
     }
     .home-text{
-        margin-top: 90px;
-    }
-    .home-text h1{
-        color: red;
+        margin-top: 100px;
     }
 }
 
