@@ -999,11 +999,11 @@ header.sticky{
         right: .8rem;
     }
 }
+
 @media(max-width: 450px){
     .home-text h1{
         color: red;
     }
-
 }
 @media(max-width: 440px){
     .home{
@@ -1019,9 +1019,6 @@ header.sticky{
     .container-box{
         padding: 40px;
     
-    }
-    .home-text h1{
-        color: red;
     }
 
 }
