@@ -1015,6 +1015,9 @@ header.sticky{
         padding: 40px;
     
     }
+    .home-text h1{
+        color: red;
+    }
 
 }
 
