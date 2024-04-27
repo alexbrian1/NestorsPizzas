@@ -1017,7 +1017,7 @@ header.sticky{
 
 }
 
-@media(max-width: 415px){
+@media(max-width: 420px){
     :root{
         --big-font: 2.4rem;
         --h2-font: 1.5rem;
