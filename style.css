@@ -991,7 +991,7 @@ header.sticky{
 
 @media(max-width: 475px){
     :root{
-        --big-font: 2.8rem;
+        --big-font: 2.6rem;
         --h2-font: 1.5rem;
     }
     .scroll{
@@ -1018,6 +1018,13 @@ header.sticky{
 }
 
 @media(max-width: 415px){
+    :root{
+        --big-font: 2.4rem;
+        --h2-font: 1.5rem;
+    }
+    .home-text{
+        margin-top: 100px;
+    }
 }
 
 
