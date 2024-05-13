@@ -723,7 +723,6 @@ header.sticky{
 	background-size: cover;
 	background-position: center;
 	transition: all .1s ease-in-out;
-	background-image: url("../img/banner3.png");
 	animation: banner 30s infinite linear;
 }
 .banner img{
