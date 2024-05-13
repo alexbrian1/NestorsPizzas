@@ -119,7 +119,7 @@ header{
 /* HOME */
 
 .sectionReduce{
-    padding: 50px 0 50px;
+    padding: 65px 0 50px;
 
 }
 section{
@@ -151,7 +151,6 @@ section{
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 2rem;
-    margin-top: 5rem;
     text-align: center;
 }
 .home-text h2{
@@ -251,10 +250,12 @@ header.sticky{
 }
 
 .container-box{
-    padding: 40px;
     background: var(--other-color);
     border-radius: 3rem;
     background-color: transparent;
+    font-size: 21px;
+    font-weight: bold;
+    padding-top: 100px;
 
 }
 
@@ -266,13 +267,6 @@ header.sticky{
 
 }
 
-
-.container-box{
-    font-size: 21px;
-    font-weight: bold;
-    margin: 16px 0;
-
-}
 .container-box h3{
     margin-bottom: 0.5rem;
  
@@ -781,35 +775,6 @@ header.sticky{
 		background-image: url("img/pizzaJamonYMorron.jpeg");
 	}
 }
-@media (max-width: 1024px){
-	.banner{
-		height: 500px;
-		overflow: hidden;
-
-}
-	.banner img{
-		margin-top: -200px;
-	}
-}
-@media (max-width: 780px){
-	.banner{
-		height: 400px;
-}
-	.banner .contenedor h2{
-		font-size: 20px;
-
-}
-	.banner p{
-		font-size: 20px;
-
-}
-	.banner a{
-		width: 200px;
-		font-size: 15px ;
-
-}
-
-}
 
 
 
@@ -837,6 +802,7 @@ header.sticky{
         font-size: 15px;
     }
 }
+
 @media(max-width: 1180px){
     :root{
         --big-font: 4rem;
@@ -844,10 +810,8 @@ header.sticky{
         --p-font: 15px;
 
     }
-    .home{
-        height: 85vh;
-    }
 }
+
 @media(max-width: 1076px){
     .nav-icons{
         display: initial;
@@ -896,10 +860,15 @@ header.sticky{
         height: auto;
     }
 
-    .home{
-        height: 70vh;
+}
 
+@media (max-width: 1024px){
+	.banner{
+		overflow: hidden;
     }
+	.banner img{
+		margin-top: -200px;
+	}
 }
 
 @media(max-width: 884px){
@@ -928,7 +897,7 @@ header.sticky{
         text-align: center;
     }
     .home-text{
-        padding-top: 50px;
+        padding-top: 150px;
     }
     .banner .contenedor{
         display: block;
@@ -943,6 +912,23 @@ header.sticky{
     .btnBW{
         display: inline;
     }
+}
+
+@media (max-width: 780px){
+	.banner .contenedor h2{
+		font-size: 20px;
+
+}
+	.banner p{
+		font-size: 20px;
+
+}
+	.banner a{
+		width: 200px;
+		font-size: 15px ;
+
+}
+
 }
 
 @media(max-width: 520px){
@@ -970,8 +956,7 @@ header.sticky{
         display: block;
     }
     .home-text{
-        margin-top: 81px;
-        padding-top: 0;
+        padding-top: 120px;
     }
     .home-text h1{
         margin-top: 0;
@@ -979,6 +964,9 @@ header.sticky{
     }
     .home-text h2{
         margin-top: 0;
+    }
+    .container-box{
+        margin-top: 25px;
     }
 
 }
@@ -995,6 +983,10 @@ header.sticky{
     }
 }
 @media(max-width: 440px){
+    :root{
+        --big-font: 2.4rem;
+        --h2-font: 1.5rem;
+    }
     .home{
         height: 110vh;
         gap: 0.1rem;
@@ -1005,6 +997,7 @@ header.sticky{
     .ratings i{
          font-size: 15px;
     }
+
 
 }
 
