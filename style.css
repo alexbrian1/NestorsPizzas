@@ -251,7 +251,7 @@ header.sticky{
 }
 
 .container-box{
-    padding: 43px;
+    padding: 40px;
     background: var(--other-color);
     border-radius: 3rem;
     background-color: transparent;
@@ -963,14 +963,14 @@ header.sticky{
 
     }
     .container{
-        padding: 50px 0 0 0;
+        padding: 75px 0 0 0;
         gap: 1rem;
     }
     .banner .contenedor{
         display: block;
     }
     .home-text{
-        margin-top: 120px;
+        margin-top: 81px;
         padding-top: 0;
     }
     .home-text h1{
@@ -979,10 +979,6 @@ header.sticky{
     }
     .home-text h2{
         margin-top: 0;
-    }
-    .container-box{
-        margin: 30px;
-    
     }
 
 }
@@ -1009,10 +1005,6 @@ header.sticky{
     .ratings i{
          font-size: 15px;
     }
-    .container-box{
-        padding: 40px;
-    
-    }
 
 }
 
@@ -1020,6 +1012,20 @@ header.sticky{
     :root{
         --big-font: 2.4rem;
         --h2-font: 1.5rem;
+    }
+}
+@media(max-width: 376px){
+    :root{
+        --big-font: 2.2rem;
+        --h2-font: 1.5rem;
+    }
+    .banner a{
+		padding: 13px 33px;
+		font-size: 13px;
+    }
+    .logo img{
+        height: 80px;
+        width: 107px;
     }
 }
 
