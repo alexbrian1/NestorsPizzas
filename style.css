@@ -963,14 +963,14 @@ header.sticky{
 
     }
     .container{
-        padding: 35px 0 0 0;
+        padding: 75px 0 0 0;
         gap: 1rem;
     }
     .banner .contenedor{
         display: block;
     }
     .home-text{
-        margin-top: 100px;
+        margin-top: 125px;
         padding-top: 0;
     }
     .home-text h1{
@@ -1020,9 +1020,6 @@ header.sticky{
     :root{
         --big-font: 2.4rem;
         --h2-font: 1.5rem;
-    }
-    .home-text{
-        margin-top: 95px;
     }
 }
 
