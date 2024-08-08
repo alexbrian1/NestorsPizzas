@@ -13,6 +13,24 @@
     <title>Nestor´s Pizzas</title>
 </head>
 <body>
+
+    <div class="container_web_loader">
+        <!-- <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div> -->
+        <!-- <h2>Preparando...</h2> -->
+    </div>
   
 <!-- Header NUEVO -->
 <!-- Header NUEVO -->
@@ -22,17 +40,17 @@
         <header>
 
             <ul class="navlist">
-                <li><a href="#home" class="active">Inico</a></li>
-                <li><a href="#pedidos">Pedidos</a></li>
-                <li><a href="#about">Novedad</a></li>
+                <li class="item_menu"><a href="#home" class="active">Inico</a></li>
+                <li class="item_menu"><a href="#pedidos">Pedidos</a></li>
+                <li class="item_menu"><a href="#about">Novedad</a></li>
             </ul>
 
-            <a href="#" class="logo"><img src="img/logo_nestorpizzas_Mesa de trabajo 1.png" alt="Logo"></a>
+            <a href="#" class="logo"><img src="img/logo_nestorpizzas_Mesa de trabajo 1.png" alt="Logo de Nestor Pizzas" loading="lazy"></a> 
 
             <ul class="navlist">
-                <li><a href="#shop">Menú</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li class="item_menu"><a href="#shop">Menú</a></li>
+                <li class="item_menu"><a href="#galeria">Galeria</a></li>
+                <li class="item_menu"><a href="#contact">Contacto</a></li>
             </ul>
 
             <div class="nav-icons">
@@ -56,7 +74,7 @@
                 <h2>Hacé tu compra en nuestra Web de pedidos online</h2>
                 <a target="_blank" rel="noopener noreferrer" class="btnBW" href="https://app.rapimesas.com.ar/r-login.asp?group=nestorpizza">Ingresar a Rapimesas</a>
                 <div id="pedidos" class="container-box">
-                    <img src="img/icon-delivery.png" alt="">
+                    <img src="img/icon-delivery.png" alt="Icono de delivery" loading="lazy">
                     <h3>Delivery</h3>
                     <a target="_blank" rel="noopener noreferrer" class="btnBW" href="https://api.whatsapp.com/send?phone=5491122648048&text=Hola! Quiero hacer un pedido">Enviar WhatsApp</a>
                 </div>
@@ -87,7 +105,7 @@
 
         <section class="about">
             <div class="about-img">
-                <img src="img/fugazzetaRellena.jpeg" alt="">
+                <img src="img/fugazzetaRellena.jpeg" alt="Pizza de fugazzeta Rellena" loading="lazy">
             </div>
 
             <div class="about-text">
@@ -112,9 +130,9 @@
 
             <div class="shop-content">
                 <div class="row">
-                    <img src="img/oniongrilled.jpg" alt="">
+                    <img src="img/oniongrilled.jpg" alt="Hamburguesa Onion Grilled" loading="lazy">
                     <h3>Onion Grilled BCB</h3>
-                    <p>Chedar, Bacon y Cebolla Grillada</p>
+                    <p>Chedar, Bacon y Cebolla Grilled</p>
                     <div class="in-text">
                         <div class="s-btn">
                             <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=5491122648048&text=Hola! Quiero pedir una Hamburguesa Onion Grilled BCB">Pedir Ahora</a>
@@ -122,9 +140,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <img src="img/pizzaJYMorron.png" alt="">
+                    <img src="img/pizzaJYMorron.png" alt="Pizza de Jamon y Morron" loading="lazy">
                     <h3>Jamon & Morrones</h3>
-                    <p>Queso muzzarella, Jamon & Morrones</p>
+                    <p>Queso Muzzarella, Jamon & Morrones</p>
                     <div class="in-text">
                         <div class="s-btn">
                             <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=5491122648048&text=Hola! Quiero pedir una Pizza de Jamon & Morrones">Pedir Ahora</a>
@@ -132,7 +150,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <img src="img/pizzaMuzzarella.jpg" alt="">
+                    <img src="img/pizzaMuzzarella.jpg" alt="Pizza de Muzzarella" loading="lazy">
                     <h3>Clasica Muzzarella</h3>
                     <p>Queso Muzzarella y aceitunas frescas</p>
                     <div class="in-text">
@@ -142,9 +160,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <img src="img/milanesa.png" alt="">
+                    <img src="img/milanesa.png" alt="Milanesa Napolitana" loading="lazy">
                     <h3>Milanesa Napolitana</h3>
-                    <p>Salta de tomate, Queso Muzzarella y Tomates</p>
+                    <p>Salsa, Queso Muzzarella y Tomates</p>
                     <div class="in-text">
                         <div class="s-btn">
                             <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=5491122648048&text=Hola! Quiero pedir una Milanesa Napolitana">Pedir Ahora</a>
@@ -164,12 +182,12 @@
                 <h4>Galeria</h4>
                 <h5>Nuestros Clientes que nos elijen cada día</h5>
                 <div class="galeria">
-                    <a href="#imagen1"><img class="gallery-image" src="img/galeria1.jpeg" alt=""></a>
-                    <a href="#imagen2"><img class="gallery-image" src="img/galeria2.jpeg" alt=""></a>
-                    <a href="#imagen3"><img class="gallery-image" src="img/galeria3.jpeg" alt=""></a>
-                    <a href="#imagen4"><img class="gallery-image" src="img/galeria4.jpeg" alt=""></a>
-                    <a href="#imagen5"><img class="gallery-image" src="img/galeria5.jpeg" alt=""></a>
-                    <a href="#imagen6"><img class="gallery-image" src="img/galeria6.jpeg" alt=""></a>
+                    <a href="#imagen1"><img class="gallery-image" src="img/galeria1.jpeg" alt="Foto publicada por cliente" loading="lazy"></a>
+                    <a href="#imagen2"><img class="gallery-image" src="img/galeria2.jpeg" alt="Foto publicada por cliente" loading="lazy"></a>
+                    <a href="#imagen3"><img class="gallery-image" src="img/galeria3.jpeg" alt="Foto publicada por cliente" loading="lazy"></a>
+                    <a href="#imagen4"><img class="gallery-image" src="img/galeria4.jpeg" alt="Foto publicada por cliente" loading="lazy"></a>
+                    <a href="#imagen5"><img class="gallery-image" src="img/galeria5.jpeg" alt="Foto publicada por cliente" loading="lazy"></a>
+                    <a href="#imagen6"><img class="gallery-image" src="img/galeria6.jpeg" alt="Foto publicada por cliente" loading="lazy"></a>
                 </div>
             </div>
             <div id="lightbox" class="lightbox">
@@ -192,7 +210,7 @@
             <div class="box">
                 <div class="in-box">
                     <div class="bx-img">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVZzwvyzjPKt4bFiaOO0JYqPHkcWOeMH8tnPpbaJe3i6LiXW5Bo_Q=w60-h60-p-rp-mo-ba4-br100" alt="">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVZzwvyzjPKt4bFiaOO0JYqPHkcWOeMH8tnPpbaJe3i6LiXW5Bo_Q=w60-h60-p-rp-mo-ba4-br100" alt="Foto de perfil del cliente">
                     </div>
                     <div class="bxx-text">
                         <h4>Mary Reynoso</h4>
@@ -211,7 +229,7 @@
             <div class="box">
                 <div class="in-box">
                     <div class="bx-img">
-                        <img src="https://lh3.googleusercontent.com/a/ACg8ocIaYKDX5zz5ppiteH2RKpl1jlh6-57P66kUxsYqVH2znhG_Qw=w60-h60-p-rp-mo-br100" alt="">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocIaYKDX5zz5ppiteH2RKpl1jlh6-57P66kUxsYqVH2znhG_Qw=w60-h60-p-rp-mo-br100" alt="Foto de perfil del cliente">
                     </div>
                     <div class="bxx-text">
                         <h4>Marilu Deza</h4>
@@ -230,7 +248,7 @@
             <div class="box">
                 <div class="in-box">
                     <div class="bx-img">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVd42I4q63RhjAMkj6GNmMwqMiicOscN32AXIXg-MBjDkTxD9ntDQ=w60-h60-p-rp-mo-ba3-br100" alt="">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVd42I4q63RhjAMkj6GNmMwqMiicOscN32AXIXg-MBjDkTxD9ntDQ=w60-h60-p-rp-mo-ba3-br100" alt="Foto de perfil del cliente">
                     </div>
                     <div class="bxx-text">
                         <h4>Vanesa Zapata</h4>
@@ -249,7 +267,7 @@
             <div class="box">
                 <div class="in-box">
                     <div class="bx-img">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjX1tASagYBYzD4juCE4fbChZNCoOgSbtFXd1zw5sHweXXMAuiFffg=w60-h60-p-rp-mo-ba2-br100" alt="">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjX1tASagYBYzD4juCE4fbChZNCoOgSbtFXd1zw5sHweXXMAuiFffg=w60-h60-p-rp-mo-ba2-br100" alt="Foto de perfil del cliente">
                     </div>
                     <div class="bxx-text">
                         <h4>Leslie Plasencia</h4>
@@ -268,7 +286,7 @@
             <div class="box">
                 <div class="in-box">
                     <div class="bx-img">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjU291ZfmdXuUJzQon-misJn_tGYJjpOALV5KSWarZZeYtpTHNRR=w60-h60-p-rp-mo-ba4-br100" alt="">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjU291ZfmdXuUJzQon-misJn_tGYJjpOALV5KSWarZZeYtpTHNRR=w60-h60-p-rp-mo-ba4-br100" alt="Foto de perfil del cliente">
                     </div>
                     <div class="bxx-text">
                         <h4>NR</h4>
@@ -287,7 +305,7 @@
             <div class="box">
                 <div class="in-box">
                     <div class="bx-img">
-                        <img src="https://lh3.googleusercontent.com/a/ACg8ocI2kFg5o_cZcfaIVqZ_NfF4M2g7LIGHu81X5ZFosd1gXOqeWlhp=w60-h60-p-rp-mo-br100" alt="">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocI2kFg5o_cZcfaIVqZ_NfF4M2g7LIGHu81X5ZFosd1gXOqeWlhp=w60-h60-p-rp-mo-br100" alt="Foto de perfil del cliente">
                     </div>
                     <div class="bxx-text">
                         <h4>Micaela Paz</h4>
@@ -316,30 +334,48 @@
                 <div class="contact-text">
                     <h4>Contacto</h4>
                     <h2>Sobre Nosotros</h2>
-                    <p>En Nestor´s Pizzas nos especializamos en pizzas y hamburguesas, nos enfocamos en ofrecer la mejor calidad de nuestros productos y brindar nuestro mejor servicio desde la presentación hasta la entrega final al comensal.</p>
+                    <p>En Nestor´s Pizzas nos especializamos en pizzas y hamburguesas, nos enfocamos en ofrecer la mejor calidad de nuestros productos y brindar el mejor servicio a todos nuestros clientes. <br> En nuestro menu tambien ofrecemos nuggets de pollo, milanesas y papas fritas. <br> Abrimos todos los dias de 11hs a 17hs y de 19hs a 00hs, hacemos delivery y take away.</p>
                     <h2>El Mejor Sabor Logrado</h2>
                     <p>Años perfeccionando nuestras recetas de pizzas y panes de hamburguesa para llevar lo mejor a la mesa de cada cliente que nos elije cada noche para su cena.</p>
-
+                    <h2>Se Parte Del Fan Club</h2>
+                    <p>Seguinos en nuestras redes sociales para enterarte de todas las promociones y sorteos.</p>
                     <div class="social">
                         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/nestorspizzas" class="clr"><i class="bx bxl-instagram-alt"></i></a>
                         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nestorspizzas"><i class="bx bxl-facebook"></i></a>
                         <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/4KM2CPdpqjXdVPgG8"><i class="bx bxl-google"></i></a>
                     </div>
                 </div>
+            </div>
+        </section>
+        
+        <footer id="footer">
+            <div class="contact-content">
                 <div class="details">
-                    <div class="main-d">
-                        <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/4KM2CPdpqjXdVPgG8"><i class="bx bxs-location-plus"></i>Solon 682, La Victoria, Moreno</a>
+                    <div class="main-d-img">
+                        <a href="#"><img src="img/logo_nestorpizzas_Mesa de trabajo 1.png" alt="Logo de Nestor Pizzas"></a>
                     </div>
                     <div class="main-d">
-                        <a href="#"><i class="bx bx-mobile-alt"></i>1122648048</a>
+                        <p class="business_name"><span>Nestor´s Pizzas</span></p>
+                        <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/4KM2CPdpqjXdVPgG8"><i class="bx bxs-location-plus"></i>Solon 682, Barrio La Victoria, Moreno</a>
+                        <a href="tel:+5422648048"><i class="bx bx-mobile-alt"></i>11 2264-8048</a>
+                        <p class="time"><i class="bx bx-time-five"></i>De 12hs a 17hs y de 19hs a 00hs <br>Delivery y Take Away</p>
+
                     </div>
                     <div class="main-d">
-                        <a href="#"><img src="img/logo_nestorpizzas_Mesa de trabajo 1.png" alt=""></a>
+                        <p class="business_name"><span>Nestor´s Burguers</span></p>
+                        <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/4KM2CPdpqjXdVPgG8"><i class="bx bxs-location-plus"></i>Lamadrid 5337, Barrio 25 de Mayo, Moreno</a>
+                        <a href="tel:+541136599089"><i class="bx bx-mobile-alt"></i>11 3659-9089</a>
+                        <p class="time"><i class="bx bx-time-five"></i>De 19hs a 00hs <br>Delivery y Take Away</p>
+                    </div>
+                    <div class="main-d main-d-img">
+                        <p class="business_name"><span>Métodos de pago</span></p>
+                        <img src="img/metodos-de-pago.png" alt="Medios de pago disponible, efectivo, mercado pago y tarjeta de credito y debito">
                     </div>
 
                 </div>
+                <p class="autor">Creado y Diseñado por <span>Alex Rubio</span></p>
             </div>
-        </section>
+        </footer>
 
         <!-- scroll -->
 

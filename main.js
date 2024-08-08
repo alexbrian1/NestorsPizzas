@@ -34,34 +34,60 @@ window.onscroll = ()=>{
 }
 
 
-///SCROLLReveal
+///SCROLLReveal y Preloader
+// variables
+const container_preloader = document.querySelector(".container_web_loader");
 
-const sr = ScrollReveal({
-    origin: "top",
-    distance: "85px",
-    duration: 2500,
-    reset: false
+// evento de carga de toda la página
+window.addEventListener("load",function(){
+        // ocultamos el preloader
+        container_preloader.classList.add("loader-hidden");
+        setTimeout(() => {
+            this.document.body.setAttribute("style","overflow: visible;");
+            animaciones();
+        }, 0);
 });
 
+function animaciones() {
+    let items_header = {
+      delay: 300,
+      interval: 250,
+      distance: '10px',
+      origin: 'top'
+  }
+  let logo = {
+      delay: 50,
+      duration: 2000,
+      distance: '10px',
+      origin: 'top'
+  }
 
-sr.reveal(".home-text",{delay:300});
+// 1. Creamos un objeto scrollReveal
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "85px",
+  duration: 2500,
+  reset: false
+});
+sr.reveal(".item_menu", items_header);
+sr.reveal(".logo", logo);
+sr.reveal(".nav-icons", logo);
+sr.reveal(".scroll", logo);
+sr.reveal(".home-text",{delay:2000});
 sr.reveal(".home-img",{delay:400});
-
 sr.reveal(".container",{delay:400});
-
 sr.reveal(".about-img",{});
 sr.reveal(".about-text",{delay:400});
-
 sr.reveal(".middle-text",{});
 sr.reveal(".row-btn, .shop-content",{delay:300});
-
 sr.reveal("#galeria",{delay:300});
-
-
 sr.reveal(".reviews, .review-content",{});
 sr.reveal(".row-btnReduce",{});
-
 sr.reveal("#contact",{delay:450});
+sr.reveal("#footer",{delay:550});
+
+}
+
 
 
 //Galeria
