@@ -66,14 +66,14 @@ function animaciones() {
 const sr = ScrollReveal({
   origin: "top",
   distance: "85px",
-  duration: 2500,
+  duration: 2000,
   reset: false
 });
 sr.reveal(".item_menu", items_header);
 sr.reveal(".logo", logo);
 sr.reveal(".nav-icons", logo);
 sr.reveal(".scroll", logo);
-sr.reveal(".home-text",{delay:2000});
+sr.reveal(".home-text",{delay:1500});
 sr.reveal(".home-img",{delay:400});
 sr.reveal(".container",{delay:400});
 sr.reveal(".about-img",{});
