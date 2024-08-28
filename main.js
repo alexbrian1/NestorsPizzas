@@ -26,7 +26,6 @@ menu.onclick = () =>{
 
 }
 
-/// solucion
 
 window.onscroll = ()=>{
     menu.classList.remove("bx-x")
