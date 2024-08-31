@@ -437,7 +437,7 @@ function mostrarEncuesta() {
       localStorage.setItem('contadores', JSON.stringify(contadores));
 
       let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
-      let codigoCupon = `CUPON${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
+      let codigoCupon = `CHEDDAR${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
       contadorCupon++;
       localStorage.setItem('contadorCupon', contadorCupon);
 
@@ -469,7 +469,7 @@ function mostrarEncuesta() {
       }).then((result) => {
         if (result.isConfirmed) {
           // Redirige a la URL deseada en una nueva pestaña
-          window.open(`https://api.whatsapp.com/send?phone=5491122648048&text=Hola%20ya%20complete%20la%20encuesta,%20mi%20cupon%20es%20${codigoCupon}%20Quiero%20Hacer%20mi%20Pedido!`, '_blank');
+          window.open(`https://api.whatsapp.com/send?phone=5491122648048&text=Hola%20quiero%20pedir%20una%20hamburguesa!%20El%20código%20de%20mi%20cupón%20para%20cheddar%20gratis%20es%20${codigoCupon}`, '_blank');
         }
       });
 
@@ -521,7 +521,7 @@ function copiarAlPortapapeles(texto) {
   }).then((result) => {
     if (result.isConfirmed) {
       // Redirige a la URL deseada en una nueva pestaña
-      window.open(`https://api.whatsapp.com/send?phone=5491122648048&text=Hola%20ya%20complete%20la%20encuesta,%20mi%20cupon%20es%20${texto}%20Quiero%20Hacer%20mi%20Pedido!`, '_blank');
+      window.open(`https://api.whatsapp.com/send?phone=5491122648048&text=Hola%20quiero%20pedir%20una%20hamburguesa!%20El%20código%20de%20mi%20cupón%20es%20`, '_blank');
     }
   });
 }
