@@ -109,66 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 //Galeria
 
-  // // Inicializar contadores para cada hamburguesa
-  // let contadores = JSON.parse(localStorage.getItem('contadores')) || {
-  //   hamburguesa1: 0,
-  //   hamburguesa2: 0,
-  //   hamburguesa3: 0,
-  //   hamburguesa4: 0,
-  //   hamburguesa5: 0,
-  //   hamburguesa6: 0,
-  //   hamburguesa7: 0
-  // };
-
-  // // Inicializar contador de cupones
-  // let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
-
-  // // Función para mostrar la encuesta
-  // function mostrarEncuesta() {
-  //   Swal.fire({
-  //     title: '¿Cuál es tu hamburguesa favorita?',
-  //     input: 'select',
-  //     inputOptions: {
-  //       hamburguesa1: 'Hamburguesa Clásica',
-  //       hamburguesa2: 'Hamburguesa BBQ',
-  //       hamburguesa3: 'Hamburguesa con Queso',
-  //       hamburguesa4: 'Hamburguesa Vegetariana',
-  //       hamburguesa5: 'Hamburguesa de Pollo',
-  //       hamburguesa6: 'Hamburguesa Picante',
-  //       hamburguesa7: 'Hamburguesa de Pescado'
-  //     },
-  //     inputPlaceholder: 'Selecciona una hamburguesa',
-  //     showCancelButton: true,
-  //     confirmButtonText: 'Enviar',
-  //     cancelButtonText: 'Cancelar'
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-  //       // Incrementar el contador de la hamburguesa seleccionada
-  //       contadores[result.value]++;
-  //       // Guardar los contadores actualizados en localStorage
-  //       localStorage.setItem('contadores', JSON.stringify(contadores));
-
-  //       // Generar el código de cupón
-  //       let codigoCupon = `CHEDAR${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
-  //       contadorCupon++;
-  //       // Guardar el nuevo contador de cupones en localStorage
-  //       localStorage.setItem('contadorCupon', contadorCupon);
-
-  //       // Mostrar la alerta de agradecimiento con el código de cupón
-  //       Swal.fire({
-  //         title: '¡Gracias por completar la encuesta!',
-  //         text: `Te regalamos un cupón: ${codigoCupon}`,
-  //         icon: 'success'
-  //       });
-  //     }
-  //   });
-  // }
-
-  // // Llamar a la función para mostrar la encuesta
-  // mostrarEncuesta();
-
-
-// Función para mostrar la encuesta
 // function mostrarEncuesta() {
 //   Swal.fire({
 //     title: '¿Cuál es tu hamburguesa favorita?',
@@ -183,12 +123,20 @@ document.addEventListener('DOMContentLoaded', function() {
 //       hamburguesa7: 'Hamburguesa de Pescado'
 //     },
 //     inputPlaceholder: 'Selecciona una hamburguesa',
-//     showCancelButton: true,
+//     background: '#111',
+//     color: '#fff',
+//     confirmButtonColor: '#ff9f0d',
 //     confirmButtonText: 'Enviar',
-//     cancelButtonText: 'Cancelar'
+//     customClass: {
+//       popup: 'swal-popup',
+//       title: 'swal-title',
+//       confirmButton: 'swal-confirm-button',
+//       content: 'swal-text',
+//       input: 'swal-input'  // Clase personalizada para el input (select)
+//     },
+//     showCancelButton: false
 //   }).then((result) => {
 //     if (result.isConfirmed) {
-//       // Incrementar el contador de la hamburguesa seleccionada (como en el ejemplo anterior)
 //       let contadores = JSON.parse(localStorage.getItem('contadores')) || {
 //         hamburguesa1: 0,
 //         hamburguesa2: 0,
@@ -201,30 +149,33 @@ document.addEventListener('DOMContentLoaded', function() {
 //       contadores[result.value]++;
 //       localStorage.setItem('contadores', JSON.stringify(contadores));
 
-//       // Generar el código de cupón
 //       let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
 //       let codigoCupon = `CUPON${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
 //       contadorCupon++;
 //       localStorage.setItem('contadorCupon', contadorCupon);
 
-//       // Mostrar la alerta de agradecimiento con el código de cupón
 //       Swal.fire({
 //         title: '¡Gracias por completar la encuesta!',
 //         text: `Te regalamos un cupón: ${codigoCupon}`,
-//         icon: 'success'
+//         icon: 'success',
+//         background: '#111',
+//         color: '#fff',
+//         iconColor: '#ff9f0d',
+//         confirmButtonColor: '#ff9f0d',
+//         confirmButtonText: 'Canjear Cupón',
+//         customClass: {
+//           popup: 'swal-popup',
+//           title: 'swal-title',
+//           confirmButton: 'swal-confirm-button',
+//           content: 'swal-text'
+//         }
 //       });
 
-//       // Marcar la encuesta como completada
-//       localStorage.setItem('encuestaCompletada', 'true');
+//       localStorage.setItem('encuestaCompletada', 'true'); // Marca la encuesta como completada
+
+//       mostrarResultados(); // Actualizar resultados después de la encuesta
 //     }
 //   });
-// }
-
-// // Verificar si el usuario ya completó la encuesta
-// if (!localStorage.getItem('encuestaCompletada')) {
-//   mostrarEncuesta();
-// } else {
-//   console.log("El usuario ya completó la encuesta.");
 // }
 
 // function mostrarResultados() {
@@ -248,21 +199,156 @@ document.addEventListener('DOMContentLoaded', function() {
 //   console.log(`Hamburguesa de Pescado: ${contadores.hamburguesa7}`);
 // }
 
-// // Llama a esta función para ver los resultados
-// mostrarResultados();
+// // Verificar si el usuario ya completó la encuesta
+// // if (!localStorage.getItem('encuestaCompletada')) {
+// //   mostrarEncuesta();
+// // } else {
+// //   console.log("El usuario ya completó la encuesta.");
+// // }
 
+// mostrarEncuesta();
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// function mostrarEncuesta() {
+//   Swal.fire({
+//     title: '¿Cuál es tu hamburguesa favorita?',
+//     input: 'select',
+//     inputOptions: {
+//       hamburguesa1: 'Hamburguesa Clásica',
+//       hamburguesa2: 'Hamburguesa BBQ',
+//       hamburguesa3: 'Hamburguesa con Queso',
+//       hamburguesa4: 'Hamburguesa Vegetariana',
+//       hamburguesa5: 'Hamburguesa de Pollo',
+//       hamburguesa6: 'Hamburguesa Picante',
+//       hamburguesa7: 'Hamburguesa de Pescado'
+//     },
+//     inputPlaceholder: 'Selecciona una hamburguesa',
+//     background: '#111',
+//     color: '#fff',
+//     confirmButtonColor: '#ff9f0d',
+//     confirmButtonText: 'Enviar',
+//     customClass: {
+//       popup: 'swal-popup',
+//       title: 'swal-title',
+//       confirmButton: 'swal-confirm-button',
+//       content: 'swal-text',
+//       input: 'swal-input'  // Clase personalizada para el input (select)
+//     },
+//     showCancelButton: false
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       let contadores = JSON.parse(localStorage.getItem('contadores')) || {
+//         hamburguesa1: 0,
+//         hamburguesa2: 0,
+//         hamburguesa3: 0,
+//         hamburguesa4: 0,
+//         hamburguesa5: 0,
+//         hamburguesa6: 0,
+//         hamburguesa7: 0
+//       };
+//       contadores[result.value]++;
+//       localStorage.setItem('contadores', JSON.stringify(contadores));
+
+//       let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
+//       let codigoCupon = `CUPON${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
+//       contadorCupon++;
+//       localStorage.setItem('contadorCupon', contadorCupon);
+
+//       Swal.fire({
+//         title: '¡Gracias por completar la encuesta!',
+//         text: `Te regalamos un cupón: ${codigoCupon}`,
+//         icon: 'success',
+//         background: '#111',
+//         color: '#fff',
+//         iconColor: '#ff9f0d',
+//         confirmButtonColor: '#ff9f0d',
+//         confirmButtonText: 'Canjear Cupón',
+//         customClass: {
+//           popup: 'swal-popup',
+//           title: 'swal-title',
+//           confirmButton: 'swal-confirm-button',
+//           content: 'swal-text'
+//         },
+//         showCancelButton: true,
+//         cancelButtonText: 'Copiar Cupón'
+//       }).then((result) => {
+//         if (result.dismiss === Swal.DismissReason.cancel) {
+//           copiarAlPortapapeles(codigoCupon);
+//         }
+//       });
+
+//       localStorage.setItem('encuestaCompletada', 'true'); // Marca la encuesta como completada
+
+//       mostrarResultados(); // Actualizar resultados después de la encuesta
+//     }
+//   });
+// }
+
+// // Función para copiar el código del cupón al portapapeles
+// function copiarAlPortapapeles(texto) {
+//   const textarea = document.createElement('textarea');
+//   textarea.value = texto;
+//   document.body.appendChild(textarea);
+//   textarea.select();
+//   document.execCommand('copy');
+//   document.body.removeChild(textarea);
+
+//   Swal.fire({
+//     icon: 'success',
+//     title: 'Código copiado',
+//     text: 'El código del cupón ha sido copiado al portapapeles.',
+//     background: '#111',
+//     color: '#fff',
+//     confirmButtonColor: '#ff9f0d',
+//   });
+// }
+
+// function mostrarResultados() {
+//   let contadores = JSON.parse(localStorage.getItem('contadores')) || {
+//     hamburguesa1: 0,
+//     hamburguesa2: 0,
+//     hamburguesa3: 0,
+//     hamburguesa4: 0,
+//     hamburguesa5: 0,
+//     hamburguesa6: 0,
+//     hamburguesa7: 0
+//   };
+
+//   console.log("Resultados de la Encuesta:");
+//   console.log(`Hamburguesa Clásica: ${contadores.hamburguesa1}`);
+//   console.log(`Hamburguesa BBQ: ${contadores.hamburguesa2}`);
+//   console.log(`Hamburguesa con Queso: ${contadores.hamburguesa3}`);
+//   console.log(`Hamburguesa Vegetariana: ${contadores.hamburguesa4}`);
+//   console.log(`Hamburguesa de Pollo: ${contadores.hamburguesa5}`);
+//   console.log(`Hamburguesa Picante: ${contadores.hamburguesa6}`);
+//   console.log(`Hamburguesa de Pescado: ${contadores.hamburguesa7}`);
+// }
+
+// // Verificar si el usuario ya completó la encuesta
+// // if (!localStorage.getItem('encuestaCompletada')) {
+// //   mostrarEncuesta();
+// // } else {
+// //   console.log("El usuario ya completó la encuesta.");
+// // }
+
+
+// mostrarEncuesta();
+
+///////////////////////////////////////
 function mostrarEncuesta() {
   Swal.fire({
     title: '¿Cuál es tu hamburguesa favorita?',
     input: 'select',
     inputOptions: {
-      hamburguesa1: 'Hamburguesa Clásica',
-      hamburguesa2: 'Hamburguesa BBQ',
-      hamburguesa3: 'Hamburguesa con Queso',
-      hamburguesa4: 'Hamburguesa Vegetariana',
-      hamburguesa5: 'Hamburguesa de Pollo',
-      hamburguesa6: 'Hamburguesa Picante',
-      hamburguesa7: 'Hamburguesa de Pescado'
+      'hamburguesa1': 'Hamburguesa Clásica',
+      'hamburguesa2': 'Hamburguesa BBQ',
+      'hamburguesa3': 'Hamburguesa con Queso',
+      'hamburguesa4': 'Hamburguesa Vegetariana',
+      'hamburguesa5': 'Hamburguesa de Pollo',
+      'hamburguesa6': 'Hamburguesa Picante',
+      'hamburguesa7': 'Hamburguesa de Pescado'
     },
     inputPlaceholder: 'Selecciona una hamburguesa',
     background: '#111',
@@ -274,7 +360,7 @@ function mostrarEncuesta() {
       title: 'swal-title',
       confirmButton: 'swal-confirm-button',
       content: 'swal-text',
-      input: 'swal-input'  // Clase personalizada para el input (select)
+      input: 'swal-input'
     },
     showCancelButton: false
   }).then((result) => {
@@ -298,7 +384,15 @@ function mostrarEncuesta() {
 
       Swal.fire({
         title: '¡Gracias por completar la encuesta!',
-        text: `Te regalamos un cupón: ${codigoCupon}`,
+        html: `
+          <div class="swal-content-container">
+            <span id="codigoCupon">${codigoCupon}</span>
+            <button id="copiarCupon" class="swal2-copiar-btn">
+              <i class="fas fa-copy"></i>
+              Copiar
+            </button>
+          </div>
+        `,
         icon: 'success',
         background: '#111',
         color: '#fff',
@@ -309,14 +403,45 @@ function mostrarEncuesta() {
           popup: 'swal-popup',
           title: 'swal-title',
           confirmButton: 'swal-confirm-button',
-          content: 'swal-text'
-        }
+          content: 'swal-text',
+          htmlContainer: 'swal-html-container'
+        },
+        showCancelButton: false
+      }).then((result) => {
+        // No se realiza ninguna acción aquí para evitar que se cierre la alerta
       });
+
+      // Asegúrate de agregar el evento al botón de copiar después de que SweetAlert2 lo haya insertado en el DOM
+      setTimeout(() => {
+        const copiarBtn = Swal.getHtmlContainer().querySelector('#copiarCupon');
+        copiarBtn.addEventListener('click', () => {
+          copiarAlPortapapeles(codigoCupon);
+        });
+      }, 100); // Espera un poco para asegurar que el DOM esté listo
 
       localStorage.setItem('encuestaCompletada', 'true'); // Marca la encuesta como completada
 
       mostrarResultados(); // Actualizar resultados después de la encuesta
     }
+  });
+}
+
+// Función para copiar el código del cupón al portapapeles
+function copiarAlPortapapeles(texto) {
+  const textarea = document.createElement('textarea');
+  textarea.value = texto;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+
+  Swal.fire({
+    icon: 'success',
+    title: 'Código copiado',
+    text: 'El código del cupón ha sido copiado al portapapeles.',
+    background: '#111',
+    color: '#fff',
+    confirmButtonColor: '#ff9f0d',
   });
 }
 
@@ -349,3 +474,4 @@ function mostrarResultados() {
 // }
 
 mostrarEncuesta();
+

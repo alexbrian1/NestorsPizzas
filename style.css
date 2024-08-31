@@ -1065,6 +1065,29 @@ header.sticky{
     color: #fff; /* Texto blanco */
   }
   
+  .swal-content-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .swal2-copiar-btn {
+    background-color: #ff9f0d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .swal2-copiar-btn i {
+    font-size: 14px;
+  }
+  
 
 
 
