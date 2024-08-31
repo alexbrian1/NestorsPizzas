@@ -108,3 +108,61 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 //Galeria
+
+  // Inicializar contadores para cada hamburguesa
+  let contadores = JSON.parse(localStorage.getItem('contadores')) || {
+    hamburguesa1: 0,
+    hamburguesa2: 0,
+    hamburguesa3: 0,
+    hamburguesa4: 0,
+    hamburguesa5: 0,
+    hamburguesa6: 0,
+    hamburguesa7: 0
+  };
+
+  // Inicializar contador de cupones
+  let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
+
+  // Función para mostrar la encuesta
+  function mostrarEncuesta() {
+    Swal.fire({
+      title: '¿Cuál es tu hamburguesa favorita?',
+      input: 'select',
+      inputOptions: {
+        hamburguesa1: 'Hamburguesa Clásica',
+        hamburguesa2: 'Hamburguesa BBQ',
+        hamburguesa3: 'Hamburguesa con Queso',
+        hamburguesa4: 'Hamburguesa Vegetariana',
+        hamburguesa5: 'Hamburguesa de Pollo',
+        hamburguesa6: 'Hamburguesa Picante',
+        hamburguesa7: 'Hamburguesa de Pescado'
+      },
+      inputPlaceholder: 'Selecciona una hamburguesa',
+      showCancelButton: true,
+      confirmButtonText: 'Enviar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Incrementar el contador de la hamburguesa seleccionada
+        contadores[result.value]++;
+        // Guardar los contadores actualizados en localStorage
+        localStorage.setItem('contadores', JSON.stringify(contadores));
+
+        // Generar el código de cupón
+        let codigoCupon = `CHEDAR${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
+        contadorCupon++;
+        // Guardar el nuevo contador de cupones en localStorage
+        localStorage.setItem('contadorCupon', contadorCupon);
+
+        // Mostrar la alerta de agradecimiento con el código de cupón
+        Swal.fire({
+          title: '¡Gracias por completar la encuesta!',
+          text: `Te regalamos un cupón: ${codigoCupon}`,
+          icon: 'success'
+        });
+      }
+    });
+  }
+
+  // Llamar a la función para mostrar la encuesta
+  mostrarEncuesta();
