@@ -166,3 +166,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Llamar a la función para mostrar la encuesta
   mostrarEncuesta();
+
