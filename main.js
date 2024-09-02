@@ -109,305 +109,23 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 //Galeria
 
-
-///////////////////////////////////////
-// function mostrarEncuesta() {
-//   Swal.fire({
-//     title: '¿Cuál es tu hamburguesa favorita?',
-//     input: 'select',
-//     inputOptions: {
-//       'hamburguesa1': 'Hamburguesa Clásica',
-//       'hamburguesa2': 'Hamburguesa BBQ',
-//       'hamburguesa3': 'Hamburguesa con Queso',
-//       'hamburguesa4': 'Hamburguesa Vegetariana',
-//       'hamburguesa5': 'Hamburguesa de Pollo',
-//       'hamburguesa6': 'Hamburguesa Picante',
-//       'hamburguesa7': 'Hamburguesa de Pescado'
-//     },
-//     inputPlaceholder: 'Selecciona una hamburguesa',
-//     background: '#111',
-//     color: '#fff',
-//     confirmButtonColor: '#ff9f0d',
-//     confirmButtonText: 'Enviar',
-//     customClass: {
-//       popup: 'swal-popup',
-//       title: 'swal-title',
-//       confirmButton: 'swal-confirm-button',
-//       content: 'swal-text',
-//       input: 'swal-input'
-//     },
-//     showCancelButton: false
-//   }).then((result) => {
-//     if (result.isConfirmed) {
-//       let contadores = JSON.parse(localStorage.getItem('contadores')) || {
-//         hamburguesa1: 0,
-//         hamburguesa2: 0,
-//         hamburguesa3: 0,
-//         hamburguesa4: 0,
-//         hamburguesa5: 0,
-//         hamburguesa6: 0,
-//         hamburguesa7: 0
-//       };
-//       contadores[result.value]++;
-//       localStorage.setItem('contadores', JSON.stringify(contadores));
-
-//       let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
-//       let codigoCupon = `CUPON${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
-//       contadorCupon++;
-//       localStorage.setItem('contadorCupon', contadorCupon);
-
-//       Swal.fire({
-//         title: '¡Gracias por completar la encuesta!',
-//         html: `
-//           <div class="swal-content-container">
-//             <span id="codigoCupon">${codigoCupon}</span>
-//             <button id="copiarCupon" class="swal2-copiar-btn">
-//               <i class="fas fa-copy"></i>
-//               Copiar
-//             </button>
-//           </div>
-//         `,
-//         icon: 'success',
-//         background: '#111',
-//         color: '#fff',
-//         iconColor: '#ff9f0d',
-//         confirmButtonColor: '#ff9f0d',
-//         confirmButtonText: 'Canjear Cupón',
-//         customClass: {
-//           popup: 'swal-popup',
-//           title: 'swal-title',
-//           confirmButton: 'swal-confirm-button',
-//           content: 'swal-text',
-//           htmlContainer: 'swal-html-container'
-//         },
-//         showCancelButton: false
-//       }).then((result) => {
-//         // No se realiza ninguna acción aquí para evitar que se cierre la alerta
-//       });
-
-//       // Asegúrate de agregar el evento al botón de copiar después de que SweetAlert2 lo haya insertado en el DOM
-//       setTimeout(() => {
-//         const copiarBtn = Swal.getHtmlContainer().querySelector('#copiarCupon');
-//         copiarBtn.addEventListener('click', () => {
-//           copiarAlPortapapeles(codigoCupon);
-//         });
-//       }, 100); // Espera un poco para asegurar que el DOM esté listo
-
-//       localStorage.setItem('encuestaCompletada', 'true'); // Marca la encuesta como completada
-
-//       mostrarResultados(); // Actualizar resultados después de la encuesta
-//     }
-//   });
-// }
-
-// // Función para copiar el código del cupón al portapapeles
-// function copiarAlPortapapeles(texto) {
-//   const textarea = document.createElement('textarea');
-//   textarea.value = texto;
-//   document.body.appendChild(textarea);
-//   textarea.select();
-//   document.execCommand('copy');
-//   document.body.removeChild(textarea);
-
-//   Swal.fire({
-//     icon: 'success',
-//     title: 'Código copiado',
-//     text: 'El código del cupón ha sido copiado al portapapeles.',
-//     background: '#111',
-//     color: '#fff',
-//     confirmButtonColor: '#ff9f0d',
-//   });
-// }
-
-// function mostrarResultados() {
-//   let contadores = JSON.parse(localStorage.getItem('contadores')) || {
-//     hamburguesa1: 0,
-//     hamburguesa2: 0,
-//     hamburguesa3: 0,
-//     hamburguesa4: 0,
-//     hamburguesa5: 0,
-//     hamburguesa6: 0,
-//     hamburguesa7: 0
-//   };
-
-//   console.log("Resultados de la Encuesta:");
-//   console.log(`Hamburguesa Clásica: ${contadores.hamburguesa1}`);
-//   console.log(`Hamburguesa BBQ: ${contadores.hamburguesa2}`);
-//   console.log(`Hamburguesa con Queso: ${contadores.hamburguesa3}`);
-//   console.log(`Hamburguesa Vegetariana: ${contadores.hamburguesa4}`);
-//   console.log(`Hamburguesa de Pollo: ${contadores.hamburguesa5}`);
-//   console.log(`Hamburguesa Picante: ${contadores.hamburguesa6}`);
-//   console.log(`Hamburguesa de Pescado: ${contadores.hamburguesa7}`);
-// }
-
-// // Verificar si el usuario ya completó la encuesta
-// // if (!localStorage.getItem('encuestaCompletada')) {
-// //   mostrarEncuesta();
-// // } else {
-// //   console.log("El usuario ya completó la encuesta.");
-// // }
-
-// mostrarEncuesta();
-
-//////////////////
-
-// function mostrarEncuesta() {
-//   Swal.fire({
-//     title: '¿Cuál es tu hamburguesa favorita?',
-//     input: 'select',
-//     inputOptions: {
-//       'hamburguesa1': 'Hamburguesa Clásica',
-//       'hamburguesa2': 'Hamburguesa BBQ',
-//       'hamburguesa3': 'Hamburguesa con Queso',
-//       'hamburguesa4': 'Hamburguesa Vegetariana',
-//       'hamburguesa5': 'Hamburguesa de Pollo',
-//       'hamburguesa6': 'Hamburguesa Picante',
-//       'hamburguesa7': 'Hamburguesa de Pescado'
-//     },
-//     inputPlaceholder: 'Selecciona una hamburguesa',
-//     background: '#111',
-//     color: '#fff',
-//     confirmButtonColor: '#ff9f0d',
-//     confirmButtonText: 'Enviar',
-//     customClass: {
-//       popup: 'swal-popup',
-//       title: 'swal-title',
-//       confirmButton: 'swal-confirm-button',
-//       content: 'swal-text',
-//       input: 'swal-input'
-//     },
-//     showCancelButton: false
-//   }).then((result) => {
-//     if (result.isConfirmed) {
-//       let contadores = JSON.parse(localStorage.getItem('contadores')) || {
-//         hamburguesa1: 0,
-//         hamburguesa2: 0,
-//         hamburguesa3: 0,
-//         hamburguesa4: 0,
-//         hamburguesa5: 0,
-//         hamburguesa6: 0,
-//         hamburguesa7: 0
-//       };
-//       contadores[result.value]++;
-//       localStorage.setItem('contadores', JSON.stringify(contadores));
-
-//       let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
-//       let codigoCupon = `CUPON${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
-//       contadorCupon++;
-//       localStorage.setItem('contadorCupon', contadorCupon);
-
-//       Swal.fire({
-//         title: '¡Gracias por completar la encuesta!',
-//         html: `
-//           <div class="swal-content-container">
-//             <span id="codigoCupon">${codigoCupon}</span>
-//             <button id="copiarCupon" class="swal2-copiar-btn">
-//               <i class="fas fa-copy"></i>
-//               Copiar
-//             </button>
-//           </div>
-//         `,
-//         icon: 'success',
-//         background: '#111',
-//         color: '#fff',
-//         iconColor: '#ff9f0d',
-//         confirmButtonColor: '#ff9f0d',
-//         confirmButtonText: 'Canjear Cupón',
-//         customClass: {
-//           popup: 'swal-popup',
-//           title: 'swal-title',
-//           confirmButton: 'swal-confirm-button',
-//           content: 'swal-text',
-//           htmlContainer: 'swal-html-container'
-//         },
-//         showCancelButton: false
-//       }).then((result) => {
-//         if (result.isConfirmed) {
-//           // Redirige a la URL deseada
-//           window.location.href = 'https://api.whatsapp.com/send?phone=5491122648048&text=Hola ya complete la encuesta mi cupon es ' + {codigoCupon} + 'Quiero Hacer mi Pedido!';
-//         }
-//       });
-
-//       // Asegúrate de agregar el evento al botón de copiar después de que SweetAlert2 lo haya insertado en el DOM
-//       setTimeout(() => {
-//         const copiarBtn = Swal.getHtmlContainer().querySelector('#copiarCupon');
-//         copiarBtn.addEventListener('click', () => {
-//           copiarAlPortapapeles(codigoCupon);
-//         });
-//       }, 100); // Espera un poco para asegurar que el DOM esté listo
-
-//       localStorage.setItem('encuestaCompletada', 'true'); // Marca la encuesta como completada
-
-//       mostrarResultados(); // Actualizar resultados después de la encuesta
-//     }
-//   });
-// }
-
-// // Función para copiar el código del cupón al portapapeles
-// function copiarAlPortapapeles(texto) {
-//   const textarea = document.createElement('textarea');
-//   textarea.value = texto;
-//   document.body.appendChild(textarea);
-//   textarea.select();
-//   document.execCommand('copy');
-//   document.body.removeChild(textarea);
-
-//   Swal.fire({
-//     icon: 'success',
-//     title: 'Código copiado',
-//     text: 'El código del cupón ha sido copiado al portapapeles.',
-//     background: '#111',
-//     color: '#fff',
-//     confirmButtonColor: '#ff9f0d',
-//   });
-// }
-
-// function mostrarResultados() {
-//   let contadores = JSON.parse(localStorage.getItem('contadores')) || {
-//     hamburguesa1: 0,
-//     hamburguesa2: 0,
-//     hamburguesa3: 0,
-//     hamburguesa4: 0,
-//     hamburguesa5: 0,
-//     hamburguesa6: 0,
-//     hamburguesa7: 0
-//   };
-
-//   console.log("Resultados de la Encuesta:");
-//   console.log(`Hamburguesa Clásica: ${contadores.hamburguesa1}`);
-//   console.log(`Hamburguesa BBQ: ${contadores.hamburguesa2}`);
-//   console.log(`Hamburguesa con Queso: ${contadores.hamburguesa3}`);
-//   console.log(`Hamburguesa Vegetariana: ${contadores.hamburguesa4}`);
-//   console.log(`Hamburguesa de Pollo: ${contadores.hamburguesa5}`);
-//   console.log(`Hamburguesa Picante: ${contadores.hamburguesa6}`);
-//   console.log(`Hamburguesa de Pescado: ${contadores.hamburguesa7}`);
-// }
-
-// // Verificar si el usuario ya completó la encuesta
-// // if (!localStorage.getItem('encuestaCompletada')) {
-// //   mostrarEncuesta();
-// // } else {
-// //   console.log("El usuario ya completó la encuesta.");
-// // }
-
-
-// mostrarEncuesta();
-
-/////////////////////////////////////////
-
-
+///Sweet Alert
 function mostrarEncuesta() {
   Swal.fire({
     title: '¿Cuál es tu hamburguesa favorita?',
     input: 'select',
     inputOptions: {
-      'hamburguesa1': 'Hamburguesa Clásica',
-      'hamburguesa2': 'Hamburguesa BBQ',
-      'hamburguesa3': 'Hamburguesa con Queso',
-      'hamburguesa4': 'Hamburguesa Vegetariana',
-      'hamburguesa5': 'Hamburguesa de Pollo',
-      'hamburguesa6': 'Hamburguesa Picante',
-      'hamburguesa7': 'Hamburguesa de Pescado'
+      'hamburguesa1': 'Hamburguesa La Bomba',
+      'hamburguesa2': 'Hamburguesa Onion Grilled BCB',
+      'hamburguesa3': 'Hamburguesa Cheeseburguer',
+      'hamburguesa4': 'Hamburguesa Bacon Cheeseburguer',
+      'hamburguesa5': 'Hamburguesa Chicken Burguer de Pollo',
+      'hamburguesa6': 'Hamburguesa Tradicional',
+      'hamburguesa7': 'Hamburguesa Cuarto de Libra',
+      'hamburguesa8': 'Hamburguesa Signature',
+      'hamburguesa9': 'Hamburguesa The Bigness',
+      'hamburguesa10': 'Hamburguesa Onion Crispy Alioli',
+      'hamburguesa11': 'Hamburguesa Onion Rings'
     },
     inputPlaceholder: 'Selecciona una hamburguesa',
     background: '#111',
@@ -431,10 +149,19 @@ function mostrarEncuesta() {
         hamburguesa4: 0,
         hamburguesa5: 0,
         hamburguesa6: 0,
-        hamburguesa7: 0
+        hamburguesa7: 0,
+        hamburguesa8: 0,
+        hamburguesa9: 0,
+        hamburguesa10: 0,
+        hamburguesa11: 0
       };
       contadores[result.value]++;
       localStorage.setItem('contadores', JSON.stringify(contadores));
+
+      // Incrementar el contador de encuestas completadas
+      let totalEncuestasCompletadas = parseInt(localStorage.getItem('totalEncuestasCompletadas')) || 0;
+      totalEncuestasCompletadas++;
+      localStorage.setItem('totalEncuestasCompletadas', totalEncuestasCompletadas);
 
       let contadorCupon = parseInt(localStorage.getItem('contadorCupon')) || 1;
       let codigoCupon = `CHEDDAR${String.fromCharCode(65 + Math.floor(Math.random() * 26))}${contadorCupon}`;
@@ -534,27 +261,38 @@ function mostrarResultados() {
     hamburguesa4: 0,
     hamburguesa5: 0,
     hamburguesa6: 0,
-    hamburguesa7: 0
+    hamburguesa7: 0,
+    hamburguesa8: 0,
+    hamburguesa9: 0,
+    hamburguesa10: 0,
+    hamburguesa11: 0
   };
 
   console.log("Resultados de la Encuesta:");
-  console.log(`Hamburguesa Clásica: ${contadores.hamburguesa1}`);
-  console.log(`Hamburguesa BBQ: ${contadores.hamburguesa2}`);
-  console.log(`Hamburguesa con Queso: ${contadores.hamburguesa3}`);
-  console.log(`Hamburguesa Vegetariana: ${contadores.hamburguesa4}`);
-  console.log(`Hamburguesa de Pollo: ${contadores.hamburguesa5}`);
-  console.log(`Hamburguesa Picante: ${contadores.hamburguesa6}`);
-  console.log(`Hamburguesa de Pescado: ${contadores.hamburguesa7}`);
+  console.log(`Hamburguesa La Bomba: ${contadores.hamburguesa1}`);
+  console.log(`Hamburguesa Onion Grilled BCB: ${contadores.hamburguesa2}`);
+  console.log(`Hamburguesa Cheeseburguer: ${contadores.hamburguesa3}`);
+  console.log(`Hamburguesa Bacon Cheeseburguer: ${contadores.hamburguesa4}`);
+  console.log(`Hamburguesa Chicken Burguer de Pollo: ${contadores.hamburguesa5}`);
+  console.log(`Hamburguesa Tradicional: ${contadores.hamburguesa6}`);
+  console.log(`Hamburguesa Cuarto de Libra: ${contadores.hamburguesa7}`);
+  console.log(`Hamburguesa Signature: ${contadores.hamburguesa8}`);
+  console.log(`Hamburguesa The Bigness: ${contadores.hamburguesa9}`);
+  console.log(`Hamburguesa Onion Crispy Alioli: ${contadores.hamburguesa10}`);
+  console.log(`Hamburguesa Onion Rings: ${contadores.hamburguesa11}`);
 }
 
-// Verificar si el usuario ya completó la encuesta
+//Verificar si el usuario ya completó la encuesta
 // if (!localStorage.getItem('encuestaCompletada')) {
 //   mostrarEncuesta();
 // } else {
 //   console.log("El usuario ya completó la encuesta.");
 // }
-
 mostrarEncuesta();
+
+
+
+
 
 
 
