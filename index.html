@@ -9,9 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="shortcut icon" href="img/logo_nestorpizzas_Mesa de trabajo 1.png">
-    <title>Nestor´s Pizzas</title>
-    <meta name="description" content="Vení a degustar las mejores Pizzas y Hamburguesas de Moreno, Zona Oeste. En Nestor´s Pizzas trabajamos constantemente para crear el mejor producto y la mejor experiencia de compra.">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Nestor's Pizzas",
+          "url": "https://nestorspizzas.com/",
+          "logo": "https://nestorspizzas.com/img/favicon.png",
+          "sameAs": [
+            "https://www.instagram.com/nestorspizzas",
+            "https://www.facebook.com/nestorspizzas"
+          ]
+        }
+        </script>   
+    <title>Nestor's Pizzas</title>
+    <meta name="description" content="Vení a degustar las mejores Pizzas y Hamburguesas de Moreno, Zona Oeste. En Nestor's Pizzas trabajamos constantemente para crear el mejor producto y la mejor experiencia de compra.">
 </head>
 <body>
 
@@ -40,11 +53,15 @@
                 <div class="home-text">
                     <h1>Pizzería <span>&</span> Hamburguesería</h1>
                     <h2>Hacé tu compra en nuestra Web de pedidos online</h2>
-                    <a target="_blank" rel="noopener noreferrer" class="btnBW" href="https://app.rapimesas.com.ar/r-login.asp?group=nestorpizza">Ingresar a Rapimesas</a>
+                    <a target="_blank" rel="noopener noreferrer" class="btnBW" href="https://app.rapimesas.com.ar/r-login.asp?group=nestorpizza">Pedir Comida Ahora</a>
                     <div id="pedidos" class="container-box">
                         <img src="img/icon-delivery.png" alt="Icono de delivery" loading="lazy">
                         <h3>Delivery</h3>
                         <a target="_blank" rel="noopener noreferrer" class="btnBW" href="https://api.whatsapp.com/send?phone=5491122648048&text=Hola vengo de la pagina web! Quiero hacer mi pedido">Enviar WhatsApp</a>
+                        <div id="pedidos" class="container-box">
+                            <h3>Obtén tu beneficio para tu próxima compra <br> por ingresar a nuestra web</h3>
+                            <button id="btncupon" class="btnBW">Obtener Cupón</button>
+                        </div>
                     </div>
                 </div>
             </div>  
@@ -147,7 +164,7 @@
                 <div class="contact-text">
                     <h4>Contacto</h4>
                     <h2>Sobre Nosotros</h2>
-                    <p>En Nestor´s Pizzas nos especializamos en pizzas y hamburguesas, nos enfocamos en ofrecer la mejor calidad de nuestros productos y brindar el mejor servicio a todos nuestros clientes. <br> En nuestro menu tambien ofrecemos nuggets de pollo, milanesas y papas fritas. <br> Abrimos todos los dias de 11hs a 17hs y de 19hs a 00hs, hacemos delivery y take away.</p>
+                    <p>En Nestor's Pizzas nos especializamos en pizzas y hamburguesas, nos enfocamos en ofrecer la mejor calidad de nuestros productos y brindar el mejor servicio a todos nuestros clientes. <br> En nuestro menu tambien ofrecemos nuggets de pollo, milanesas y papas fritas. <br> Abrimos todos los dias de 11hs a 17hs y de 19hs a 00hs, hacemos delivery y take away.</p>
                     <h2>El Mejor Sabor Logrado</h2>
                     <p>Años perfeccionando nuestras recetas de pizzas y panes de hamburguesa para llevar lo mejor a la mesa de cada cliente que nos elije cada noche para su cena.</p>
                     <h2>Se Parte Del Fan Club</h2>
@@ -167,14 +184,14 @@
                         <a href="#"><img src="img/logo_nestorpizzas_Mesa de trabajo 1.png" alt="Logo de Nestor Pizzas" loading="lazy"></a>
                     </div>
                     <div class="main-d">
-                        <p class="business_name"><span>Nestor´s Pizzas</span></p>
+                        <p class="business_name"><span>Nestor's Pizzas</span></p>
                         <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/4KM2CPdpqjXdVPgG8"><i class="bx bxs-location-plus"></i>Solon 682, Barrio La Victoria, Moreno</a>
                         <a href="tel:+5491122648048"><i class="bx bx-mobile-alt"></i>11 2264-8048</a>
                         <p class="time"><i class="bx bx-time-five"></i>De 12hs a 17hs y de 19hs a 00hs <br>Delivery y Take Away</p>
 
                     </div>
                     <div class="main-d">
-                        <p class="business_name"><span>Nestor´s Burguers</span></p>
+                        <p class="business_name"><span>Nestor's Burguers</span></p>
                         <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/4KM2CPdpqjXdVPgG8"><i class="bx bxs-location-plus"></i>Lamadrid 5337, Barrio 25 de Mayo, Moreno</a>
                         <a href="tel:+5491136599089"><i class="bx bx-mobile-alt"></i>11 3659-9089</a>
                         <p class="time"><i class="bx bx-time-five"></i>De 19hs a 00hs <br>Delivery y Take Away</p>
@@ -191,8 +208,9 @@
         <a href="#" class="scroll">
             <i class="bx bx-up-arrow-alt"></i>
         </a>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

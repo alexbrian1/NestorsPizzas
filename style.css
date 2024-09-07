@@ -307,7 +307,7 @@ header.sticky{
     background-color: transparent;
     font-size: 21px;
     font-weight: bold;
-    padding-top: 100px;
+    padding-top: 50px;
 
 }
 
@@ -724,7 +724,7 @@ header.sticky{
 	justify-content: center;
 
 }
-.banner .contenedor h2{
+.banner .contenedor h2,.banner .contenedor h3{
     text-shadow: 2px 2px 3px #333;
     font-size: 29px;
 }
@@ -901,7 +901,7 @@ header.sticky{
 }
 
 @media (max-width: 780px){
-	.banner .contenedor h2{
+	.banner .contenedor h2,.banner .contenedor h3{
 		font-size: 20px;
 
 }
@@ -1017,12 +1017,84 @@ header.sticky{
 }
 
 
+/* Estilos personalizados para SweetAlert */
+.swal-popup {
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(255, 159, 13, 0.5);
+    background-color: #111;
+  }
 
+  .swal-title {
+    font-family: 'Satisfy', cursive;
+    font-size: var(--h2-font);
+    color: #ff9f0d;
+  }
 
+  .swal-text {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
 
+  /* Botón de confirmación */
+  .swal-confirm-button {
+    background-color: #ff9f0d;
+    color: #111;
+    border-radius: 2rem;
+    padding: 10px 20px;
+    font-size: var(--p-font);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(255, 159, 13, 0.7);
+    cursor: pointer;
+  }
 
+  .swal-confirm-button:hover {
+    background-color: #e68a00;
+  }
 
+  /* Estilo para el select y sus opciones */
+  .swal-input select {
+    background-color: #212121; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #ff9f0d; /* Borde naranja */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+  }
 
+  .swal-input option {
+    background-color: #212121; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+  }
+
+  /* Contenedor para el contenido personalizado */
+  .swal-content-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Estilo para el botón de copiar */
+  .swal2-copiar-btn {
+    background-color: #ff9f0d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .swal2-copiar-btn:hover {
+    background-color: #e68a00;
+  }
+
+  .swal2-copiar-btn i {
+    font-size: 14px;
+  }
 
 
 

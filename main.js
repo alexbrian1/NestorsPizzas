@@ -90,21 +90,108 @@ sr.reveal("#footer",{delay:550});
 
 
 //Galeria
+
+// Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.gallery-image');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-  
-    images.forEach(image => {
-      image.addEventListener('click', function() {
-        lightbox.style.display = 'block';
-        lightboxImage.src = this.src;
+  const btncupon = document.getElementById("btncupon");
+
+  function mostrarEncuesta() {
+    let codigoCupon = 'CHEDDAR';
+
+    Swal.fire({
+      title: '¡Gracias por completar la encuesta!',
+      html: `
+        <div class="swal-content-container">
+          <span id="codigoCupon">${codigoCupon}</span>
+          <button id="copiarCupon" class="swal2-copiar-btn">
+            <i class="fas fa-copy"></i> Copiar
+          </button>
+        </div>
+      `,
+      icon: 'success',
+      background: '#111',
+      color: '#fff',
+      iconColor: '#ff9f0d',
+      confirmButtonColor: '#ff9f0d',
+      confirmButtonText: 'Ir a canjear cupón',
+      customClass: {
+        popup: 'swal-popup',
+        title: 'swal-title',
+        confirmButton: 'swal-confirm-button',
+        content: 'swal-text',
+        htmlContainer: 'swal-html-container'
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Redirige a la URL deseada en una nueva pestaña
+        window.open(`https://api.whatsapp.com/send?phone=5491122648048&text=Hola%20quiero%20pedir%20una%20hamburguesa!%20El%20código%20de%20mi%20cupón%20para%20cheddar%20gratis%20es%20${codigoCupon}`, '_blank');
+      }
+    });
+
+    setTimeout(() => {
+      const copiarBtn = Swal.getHtmlContainer().querySelector('#copiarCupon');
+      if (copiarBtn) {
+        copiarBtn.addEventListener('click', () => {
+          copiarAlPortapapeles(codigoCupon);
+        });
+      }
+    }, 100);
+
+    localStorage.setItem('cuponObtenido', 'true');
+  }
+
+  // Función para copiar el código del cupón al portapapeles
+  function copiarAlPortapapeles(texto) {
+    const textarea = document.createElement('textarea');
+    textarea.value = texto;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Código copiado',
+      text: `Tu cupón es: ${texto}`,
+      background: '#111',
+      color: '#fff',
+      confirmButtonColor: '#ff9f0d',
+      confirmButtonText: 'Ir a canjear cupón',
+      customClass: {
+        popup: 'swal-popup',
+        title: 'swal-title',
+        confirmButton: 'swal-confirm-button',
+        content: 'swal-text',
+        htmlContainer: 'swal-html-container'
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Redirige a la URL deseada en una nueva pestaña
+        window.open(`https://api.whatsapp.com/send?phone=5491122648048&text=Hola%20quiero%20pedir%20una%20hamburguesa!%20El%20código%20de%20mi%20cupón%20es%20`, '_blank');
+      }
+    });
+  }
+
+  btncupon.addEventListener("click", () => {
+    if (localStorage.getItem('cuponObtenido') === 'true') {
+      Swal.fire({
+        icon: 'info',
+        iconColor: '#ff9f0d',
+        title: 'Cupón ya generado',
+        text: 'Ya has obtenido un cupón. Tu cupon es CHEDDAR ¡Canjéalo ahora!',
+        background: '#111',
+        color: '#fff',
+        confirmButtonColor: '#ff9f0d',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Redirige a la URL deseada en una nueva pestaña
+          window.open(`https://api.whatsapp.com/send?phone=5491122648048&text=Hola%20quiero%20pedir%20una%20hamburguesa!%20El%20código%20de%20mi%20cupón%20es%20`, '_blank');
+        }
       });
-    });
-  
-    const closeButton = document.querySelector('.close');
-    closeButton.addEventListener('click', function() {
-      lightbox.style.display = 'none';
-    });
+    } else {
+      mostrarEncuesta();
+    }
   });
-//Galeria
+});
+
+localStorage.clear();
