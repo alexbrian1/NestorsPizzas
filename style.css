@@ -1018,24 +1018,40 @@ header.sticky{
 
 
 /* Estilos personalizados para SweetAlert */
+<<<<<<< HEAD
+=======
+/* Estilos personalizados para SweetAlert */
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
 .swal-popup {
     border-radius: 1rem;
     box-shadow: 0 0 15px rgba(255, 159, 13, 0.5);
     background-color: #111;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
   .swal-title {
     font-family: 'Satisfy', cursive;
     font-size: var(--h2-font);
     color: #ff9f0d;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
   .swal-text {
     font-family: 'Poppins', sans-serif;
     color: #fff;
   }
+<<<<<<< HEAD
 
   /* Botón de confirmación */
+=======
+  
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
   .swal-confirm-button {
     background-color: #ff9f0d;
     color: #111;
@@ -1044,6 +1060,7 @@ header.sticky{
     font-size: var(--p-font);
     font-weight: 600;
     box-shadow: 0 0 10px rgba(255, 159, 13, 0.7);
+<<<<<<< HEAD
     cursor: pointer;
   }
 
@@ -1051,6 +1068,14 @@ header.sticky{
     background-color: #e68a00;
   }
 
+=======
+  }
+  
+  .swal-confirm-button:hover {
+    background-color: #e68a00;
+  }
+  
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
   /* Estilo para el select y sus opciones */
   .swal-input select {
     background-color: #212121; /* Fondo gris oscuro */
@@ -1060,21 +1085,33 @@ header.sticky{
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
   .swal-input option {
     background-color: #212121; /* Fondo gris oscuro */
     color: #fff; /* Texto blanco */
   }
+<<<<<<< HEAD
 
   /* Contenedor para el contenido personalizado */
+=======
+  
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
   .swal-content-container {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: center;
   }
+<<<<<<< HEAD
 
   /* Estilo para el botón de copiar */
+=======
+  
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
   .swal2-copiar-btn {
     background-color: #ff9f0d;
     color: #fff;
@@ -1085,6 +1122,7 @@ header.sticky{
     display: flex;
     align-items: center;
     gap: 5px;
+<<<<<<< HEAD
     transition: background-color 0.3s ease;
   }
 
@@ -1095,6 +1133,19 @@ header.sticky{
   .swal2-copiar-btn i {
     font-size: 14px;
   }
+=======
+  }
+  
+  .swal2-copiar-btn i {
+    font-size: 14px;
+  }
+  
+
+
+
+
+
+>>>>>>> fe14c31646fae1eacc40331b7a4467ab14a0a9bd
 
 
 
